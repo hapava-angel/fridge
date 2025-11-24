@@ -50,11 +50,11 @@ classDiagram
 
     %% ----- Основной класс (ниже всех тестов) -----
     class Frige {
-        +add(items: dict, title: str, amount: Decimal, expiration_date: str?): void
-        +add_by_note(items: dict, note: str): void
-        +find(items: dict, needle: str): list~str~
+        +add(items: dict, title: str, amount: Decimal, expiration_date: str?): None
+        +add_by_note(items: dict, note: str): None
+        +find(items: dict, needle: str): list[str]
         +amount(items: dict, needle: str): Decimal
-        +expire(items: dict, in_advance_days: int = 0): list~(str, Decimal)~
+        +expire(items: dict, in_advance_days: int = 0): list[tuple[str, Decimal]]
     }
 
     %% Зависимости тестов от Frige
